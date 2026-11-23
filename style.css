@@ -7,6 +7,33 @@
     --muted: #64748b;
     --line: #e2e8f0;
     --surface: #f8fafc;
+    --card: #fff;
+    --tag: #eff6ff;
+    --tag-ink: #1e40af;
+    --skill-line: #f1f5f9;
+    --page: #fff;
+    --footer: #080d18;
+    --shadow: rgba(15, 23, 42, 0.06);
+    --shadow-hover: rgba(15, 23, 42, 0.11);
+}
+
+:root[data-theme="dark"] {
+    --navy: #e7edf7;
+    --navy-soft: #111827;
+    --blue: #60a5fa;
+    --blue-dark: #93c5fd;
+    --ink: #cbd5e1;
+    --muted: #94a3b8;
+    --line: #293548;
+    --surface: #111827;
+    --card: #172033;
+    --tag: #1e3a5f;
+    --tag-ink: #bfdbfe;
+    --skill-line: #293548;
+    --page: #0b1220;
+    --footer: #060a12;
+    --shadow: rgba(0, 0, 0, 0.18);
+    --shadow-hover: rgba(0, 0, 0, 0.28);
 }
 
 html {
@@ -16,6 +43,7 @@ html {
 
 body {
     color: var(--ink);
+    background: var(--page);
     font-family: "Segoe UI", Arial, sans-serif;
     line-height: 1.65;
 }
@@ -58,6 +86,30 @@ a {
     color: #fff !important;
 }
 
+.theme-control {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    cursor: pointer;
+    transition: background 160ms ease, border-color 160ms ease;
+}
+
+.theme-toggle:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.16);
+}
+
 .hero {
     min-height: 720px;
     display: flex;
@@ -66,7 +118,7 @@ a {
     color: #fff;
     background:
         radial-gradient(circle at 82% 20%, rgba(96, 165, 250, 0.22), transparent 24rem),
-        linear-gradient(135deg, var(--navy), var(--navy-soft) 58%, #1e40af);
+        linear-gradient(135deg, #0f172a, #172554 58%, #1e40af);
 }
 
 .eyebrow,
@@ -147,7 +199,7 @@ a {
 
 .proof-bar {
     border-bottom: 1px solid var(--line);
-    background: #fff;
+    background: var(--page);
 }
 
 .proof-list {
@@ -213,8 +265,8 @@ a {
 .timeline-card {
     height: 100%;
     border: 1px solid var(--line);
-    background: #fff;
-    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+    background: var(--card);
+    box-shadow: 0 12px 35px var(--shadow);
 }
 
 .metric-card {
@@ -293,7 +345,7 @@ a {
     left: -47px;
     width: 14px;
     height: 14px;
-    border: 3px solid #fff;
+    border: 3px solid var(--page);
     border-radius: 50%;
     background: var(--blue);
     box-shadow: 0 0 0 3px #bfdbfe;
@@ -333,8 +385,8 @@ a {
 .tag-list li {
     padding: 5px 10px;
     border-radius: 999px;
-    background: #eff6ff;
-    color: #1e40af;
+    background: var(--tag);
+    color: var(--tag-ink);
     font-size: 0.78rem;
     font-weight: 700;
 }
@@ -362,7 +414,7 @@ a {
     position: absolute;
     top: 24px;
     right: 24px;
-    color: #dbeafe;
+    color: var(--tag);
     font-size: 3.4rem;
     font-weight: 800;
 }
@@ -379,7 +431,7 @@ a {
     height: 52px;
     place-items: center;
     border-radius: 12px;
-    background: #eff6ff;
+    background: var(--tag);
     color: var(--blue);
     font-size: 1.35rem;
 }
@@ -399,7 +451,7 @@ a {
 
 .skill-card li {
     padding: 7px 0;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid var(--skill-line);
     color: var(--muted);
 }
 
@@ -410,7 +462,7 @@ a {
 .cta-section {
     padding: 72px 0;
     color: #fff;
-    background: linear-gradient(135deg, var(--navy), #1e3a8a);
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
 }
 
 .cta-panel {
@@ -433,7 +485,7 @@ a {
 
 footer {
     padding: 24px 0;
-    background: #080d18;
+    background: var(--footer);
     color: #94a3b8;
     font-size: 0.88rem;
 }
@@ -466,7 +518,7 @@ footer a {
     .skill-card:hover,
     .timeline-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 18px 42px rgba(15, 23, 42, 0.11);
+        box-shadow: 0 18px 42px var(--shadow-hover);
     }
 }
 
@@ -488,6 +540,11 @@ footer a {
 @media (max-width: 767px) {
     .navbar-collapse {
         padding: 12px 0;
+    }
+
+    .theme-control {
+        margin-top: 8px;
+        margin-left: 0;
     }
 
     .hero {
