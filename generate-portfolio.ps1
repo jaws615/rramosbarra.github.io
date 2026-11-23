@@ -1,0 +1,470 @@
+$ProjectPath = "C:\Users\Renzo\Documents\gitcopilot\rramosbarra.github.io"
+
+New-Item -ItemType Directory -Force -Path $ProjectPath | Out-Null
+
+$IndexHtml = @'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Renzo Ramos | Technology Leader</title>
+
+<meta name="description"
+content="Technology Leader specializing in Platform Engineering, DevOps Transformation and AI Automation">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="#">
+Renzo Ramos
+</a>
+
+<button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#metrics">Impact</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#experience">Experience</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#skills">Skills</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="container text-center">
+
+<h1>Renzo Ramos</h1>
+
+<h2>
+Technology Leader | Platform Engineering |
+DevOps Transformation | AI Automation
+</h2>
+
+<p class="lead-text">
+
+Driving engineering excellence, cloud modernization,
+enterprise platform transformation, and AI-powered
+automation initiatives for over 20 years.
+
+</p>
+
+<div>
+
+<a href="resume.pdf"
+   class="btn btn-primary btn-lg">
+
+Download Resume
+
+</a>
+
+<a href="https://www.linkedin.com/in/rramosbarra"
+   target="_blank"
+   class="btn btn-outline-light btn-lg">
+
+LinkedIn
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="section">
+
+<div class="container">
+
+<h2 class="section-title">Executive Summary</h2>
+
+<p>
+
+Technology leader with extensive experience leading software engineering,
+DevOps transformations, cloud modernization initiatives, enterprise
+application development, and platform delivery.
+
+</p>
+
+<p>
+
+Proven success building high-performing teams, improving software delivery
+practices, implementing CI/CD modernization, and delivering business-critical
+solutions across distribution, healthcare, procurement, consulting, and
+technology sectors.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="metrics" class="section bg-light">
+
+<div class="container">
+
+<h2 class="section-title text-center">Leadership Impact</h2>
+
+<div class="row">
+
+<div class="col-md-3">
+<div class="metric-card">
+<h3>20+</h3>
+<p>Years Experience</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="metric-card">
+<h3>20+</h3>
+<p>Developers Led</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="metric-card">
+<h3>20hrs → 4hrs</h3>
+<p>Deployment Reduction</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="metric-card">
+<h3>5+</h3>
+<p>Industries Served</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="experience" class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Leadership Experience
+</h2>
+
+<div class="exp-card">
+
+<h3>D&H Distributing</h3>
+
+<h5>DevOps Manager</h5>
+
+<ul>
+<li>Developed DevOps strategy and roadmap</li>
+<li>Implemented Azure CI/CD pipelines</li>
+<li>Introduced Power Automate solutions</li>
+<li>Improved SDLC maturity and delivery practices</li>
+<li>Implemented secure engineering practices</li>
+</ul>
+
+<h5>Application Development Manager</h5>
+
+<ul>
+<li>Managed a team of 20 onshore/offshore developers</li>
+<li>Led resource planning and delivery initiatives</li>
+<li>Established secure coding practices</li>
+<li>Drove development team transformation efforts</li>
+</ul>
+
+<h5>Technical Lead</h5>
+
+<ul>
+<li>Developed proof-of-concepts</li>
+<li>Led SDLC modernization efforts</li>
+<li>Introduced CI/CD processes</li>
+<li>Mentored developers and technical teams</li>
+</ul>
+
+</div>
+
+<div class="exp-card">
+
+<h3>HCAnalytics</h3>
+
+<h5>Development Director</h5>
+
+<ul>
+<li>Designed Azure cloud solutions</li>
+<li>Built Azure Data Factory pipelines</li>
+<li>Led UiPath automation initiatives</li>
+<li>Developed AI-driven patient outreach systems</li>
+<li>Implemented Power BI reporting</li>
+</ul>
+
+</div>
+
+<div class="exp-card">
+
+<h3>JAGGAER</h3>
+
+<h5>P2P Development Director</h5>
+
+<ul>
+<li>Led enterprise procurement platform development</li>
+<li>Implemented Continuous Delivery practices</li>
+<li>Introduced SonarQube quality controls</li>
+<li>Reduced deployments from 20+ hours to under 4 hours</li>
+</ul>
+
+</div>
+
+<div class="exp-card">
+
+<h3>IBM</h3>
+
+<h5>Managing Consultant</h5>
+
+<ul>
+<li>Supported SAP implementations</li>
+<li>Led SAP Fiori initiatives</li>
+<li>Managed offshore resources</li>
+<li>Delivered mobility architecture solutions</li>
+</ul>
+
+</div>
+
+<div class="exp-card">
+
+<h3>CSC</h3>
+
+<h5>Mobile Offerings Manager</h5>
+
+<ul>
+<li>Defined enterprise mobility offerings</li>
+<li>Established SAP mobility COE</li>
+<li>Supported pre-sales engagements</li>
+<li>Developed RFID warehouse mapping solutions</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills" class="section bg-light">
+
+<div class="container">
+
+<h2 class="section-title">Technology Expertise</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+<h4>Leadership</h4>
+<ul>
+<li>Engineering Leadership</li>
+<li>Strategic Roadmaps</li>
+<li>Budget Planning</li>
+<li>Talent Development</li>
+</ul>
+</div>
+
+<div class="col-md-4">
+<h4>Platform Engineering</h4>
+<ul>
+<li>Azure DevOps</li>
+<li>CI/CD</li>
+<li>DevOps Transformation</li>
+<li>SDLC Modernization</li>
+</ul>
+</div>
+
+<div class="col-md-4">
+<h4>Automation & AI</h4>
+<ul>
+<li>Power Automate</li>
+<li>Azure Data Factory</li>
+<li>Logic Apps</li>
+<li>UiPath</li>
+<li>Power BI</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="section">
+
+<div class="container text-center">
+
+<h2>
+Let's Connect
+</h2>
+
+<p>
+renzo@gmx.com
+</p>
+
+<p>
+(717) 620-9092
+</p>
+
+<a href="https://www.linkedin.com/in/rramosbarra"
+   target="_blank"
+   class="btn btn-primary">
+
+LinkedIn Profile
+
+</a>
+
+</div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+'@
+
+$StyleCss = @'
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",sans-serif;
+    color:#1e293b;
+}
+
+.navbar{
+    background:#0f172a;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1d4ed8);
+    color:white;
+}
+
+.hero h1{
+    font-size:5rem;
+    font-weight:700;
+}
+
+.hero h2{
+    margin-top:15px;
+    margin-bottom:25px;
+}
+
+.lead-text{
+    font-size:1.3rem;
+    max-width:900px;
+    margin:auto;
+    margin-bottom:40px;
+}
+
+.section{
+    padding:100px 0;
+}
+
+.section-title{
+    margin-bottom:40px;
+    font-weight:700;
+}
+
+.metric-card{
+    background:white;
+    padding:30px;
+    margin:10px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.metric-card h3{
+    font-size:2rem;
+    color:#2563eb;
+}
+
+.exp-card{
+    padding:25px;
+    margin-bottom:25px;
+    border-left:5px solid #2563eb;
+    background:white;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+'@
+
+$ScriptJs = @'
+console.log("Renzo Ramos Premium Portfolio Loaded");
+'@
+
+$ReadMe = @'
+Renzo Ramos Executive Portfolio
+
+Upload all files to:
+
+https://github.com/jaws615/rramosbarra.github.io
+
+Future additions:
+
+- resume.pdf
+- custom domain
+- analytics
+- dark mode toggle
+'@
+
+Set-Content "$ProjectPath\index.html" $IndexHtml -Encoding UTF8
+Set-Content "$ProjectPath\style.css" $StyleCss -Encoding UTF8
+Set-Content "$ProjectPath\script.js" $ScriptJs -Encoding UTF8
+Set-Content "$ProjectPath\README.md" $ReadMe -Encoding UTF8
+
+Write-Host ""
+Write-Host "Portfolio successfully generated"
+Write-Host ""
+Write-Host $ProjectPath
