@@ -53,7 +53,6 @@ export default {
         cloudAndAutomation: ["Azure", "Azure Data Factory", "Logic Apps", "Power Platform", "UiPath", "RPA", "Power BI"]
     },
     contact: {
-        email: "renzo@gmx.com",
         linkedin: "https://www.linkedin.com/in/rramosbarra"
     }
 };
