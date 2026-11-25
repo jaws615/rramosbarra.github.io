@@ -1,0 +1,35 @@
+name = "renzo-resume-chat"
+main = "src/index.js"
+compatibility_date = "2026-11-24"
+workers_dev = true
+
+[vars]
+SITE_ORIGIN = "https://jaws615.github.io"
+TURNSTILE_EXPECTED_HOSTNAME = "jaws615.github.io"
+AI_MODEL = "@cf/meta/llama-3.1-8b-instruct"
+MAX_OUTPUT_TOKENS = "320"
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "rramos-resume-leads"
+database_id = "a34de029-cbdb-4fbd-ae02-ba6b44bc37c7"
+migrations_dir = "migrations"
+
+[[ratelimits]]
+name = "CHAT_RATE_LIMITER"
+namespace_id = "202611241"
+
+[ratelimits.simple]
+limit = 10
+period = 60
+
+[[ratelimits]]
+name = "CONTACT_RATE_LIMITER"
+namespace_id = "202611242"
+
+[ratelimits.simple]
+limit = 3
+period = 60

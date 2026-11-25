@@ -349,6 +349,80 @@
         </section>
     </main>
 
+    <aside class="recruiter-assistant" id="recruiter-assistant"
+           data-api-base-url="https://renzo-resume-chat.jaws615.workers.dev"
+           data-turnstile-sitekey="0x4AAAAAAGRxKDr2nPeqoyKU"
+           aria-label="Recruiter resume assistant">
+        <button class="assistant-launcher" id="assistant-launcher" type="button"
+                aria-expanded="false" aria-controls="assistant-panel">
+            <i class="bi bi-chat-dots-fill" aria-hidden="true"></i>
+            <span>Ask about my resume</span>
+        </button>
+        <section class="assistant-panel" id="assistant-panel" aria-labelledby="assistant-title" hidden>
+            <header class="assistant-header">
+                <div>
+                    <p class="section-kicker">Recruiter Q&amp;A</p>
+                    <h2 id="assistant-title">Ask about Renzo’s experience</h2>
+                </div>
+                <button class="assistant-close" id="assistant-close" type="button" aria-label="Close resume assistant">
+                    <i class="bi bi-x-lg" aria-hidden="true"></i>
+                </button>
+            </header>
+            <p class="assistant-privacy">
+                Questions are processed by Cloudflare Workers AI. This site does not save chat transcripts;
+                recent questions stay in this page session for follow-ups. Cloudflare also processes the
+                request IP for rate limiting.
+            </p>
+            <div class="assistant-messages" id="assistant-messages" role="log" aria-live="polite" aria-relevant="additions">
+                <p class="assistant-message assistant-message-bot">Hi! Ask me about Renzo’s experience, leadership, or technical expertise.</p>
+            </div>
+            <p class="assistant-status" id="assistant-status" role="status" aria-live="polite"></p>
+            <form class="assistant-chat-form" id="assistant-chat-form">
+                <label for="assistant-question">Your question</label>
+                <textarea id="assistant-question" name="question" maxlength="1500" rows="2"
+                          placeholder="For example: What DevOps transformation work has Renzo led?"
+                          required></textarea>
+                <button class="btn btn-primary" id="assistant-send" type="submit">
+                    <i class="bi bi-send-fill" aria-hidden="true"></i> Ask
+                </button>
+            </form>
+
+            <button class="assistant-contact-toggle" id="assistant-contact-toggle" type="button"
+                    aria-expanded="false" aria-controls="assistant-contact">
+                <i class="bi bi-envelope" aria-hidden="true"></i> Leave Renzo a message
+            </button>
+            <section class="assistant-contact" id="assistant-contact" aria-labelledby="assistant-contact-title" hidden>
+                <h3 id="assistant-contact-title">Optional recruiter contact</h3>
+                <p>
+                    If you submit this form, your name, email, and message will be stored in Cloudflare’s
+                    U.S. database for Renzo to review and will be kept until he deletes them. Your details
+                    are not sent to the AI assistant.
+                </p>
+                <form id="assistant-contact-form">
+                    <label for="contact-name">Name</label>
+                    <input id="contact-name" name="name" type="text" maxlength="100" autocomplete="name" required>
+                    <label for="contact-email">Email</label>
+                    <input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" required>
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" maxlength="2000" rows="3" required></textarea>
+                    <div class="assistant-honeypot" aria-hidden="true">
+                        <label for="contact-website">Leave this field blank</label>
+                        <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+                    </div>
+                    <div id="assistant-turnstile" class="assistant-turnstile"></div>
+                    <div class="assistant-consent">
+                        <input id="contact-consent" name="consent" type="checkbox" required>
+                        <label for="contact-consent">I agree to have these contact details stored for Renzo to review.</label>
+                    </div>
+                    <button class="btn btn-primary" id="assistant-contact-submit" type="submit">
+                        Send contact request
+                    </button>
+                </form>
+                <p class="assistant-status" id="assistant-contact-status" role="status" aria-live="polite"></p>
+            </section>
+        </section>
+    </aside>
+
     <footer>
         <div class="container">
             <span>&copy; <span id="copyright-year"></span> Renzo Ramos</span>
