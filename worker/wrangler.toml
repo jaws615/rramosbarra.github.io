@@ -6,7 +6,7 @@ workers_dev = true
 [vars]
 SITE_ORIGIN = "https://jaws615.github.io"
 TURNSTILE_EXPECTED_HOSTNAME = "jaws615.github.io"
-AI_MODEL = "@cf/meta/llama-3.1-8b-instruct"
+AI_MODEL = "@cf/meta/llama-3.1-8b-instruct-fast"
 MAX_OUTPUT_TOKENS = "320"
 
 [ai]

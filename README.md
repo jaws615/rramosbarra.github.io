@@ -79,7 +79,7 @@ The Worker validates every contact-form token with Cloudflare's Siteverify API a
 
 `wrangler.toml` already defines:
 
-- Workers AI binding `AI`, using the configurable `AI_MODEL` variable (initially `@cf/meta/llama-3.1-8b-instruct`).
+- Workers AI binding `AI`, using the configurable `AI_MODEL` variable (initially `@cf/meta/llama-3.1-8b-instruct-fast`).
 - D1 binding `DB`; the D1 create command fills its database ID.
 - `CHAT_RATE_LIMITER` (10 requests per 60 seconds) and `CONTACT_RATE_LIMITER` (3 requests per 60 seconds).
 - `SITE_ORIGIN` and `TURNSTILE_EXPECTED_HOSTNAME` for the published portfolio.
